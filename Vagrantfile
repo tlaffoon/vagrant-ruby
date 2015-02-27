@@ -30,8 +30,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "rbenv::user"
     chef.add_recipe "rbenv::vagrant"
     chef.add_recipe "vim"
-    chef.add_recipe "mysql::server"
-    chef.add_recipe "mysql::client"
 
     # Install Ruby 2.2.0 and Bundler
     # Set an empty root password for MySQL to make things simple
@@ -39,8 +37,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       rbenv: {
         user_installs: [{
           user: 'vagrant',
-          rubies: ["2.2.0"],
-          global: "2.2.0",
+          rubies: ["2.1.4"],
+          global: "2.1.4",
           gems: {
             "2.2.0" => [
               { name: "bundler" }
