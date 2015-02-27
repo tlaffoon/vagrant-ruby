@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "rbenv::vagrant"
     chef.add_recipe "vim"
 
-    # Install Ruby 2.2.0 and Bundler
+    # Install Ruby 2.1.4 and Bundler
     # Set an empty root password for MySQL to make things simple
     chef.json = {
       rbenv: {
